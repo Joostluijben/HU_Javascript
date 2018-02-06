@@ -1,0 +1,84 @@
+#navigation {
+  border-bottom: 10px solid #1179DC;
+  padding-bottom:0px
+}
+
+#navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#navigation li {
+  float: left;
+  margin-left: -1px;
+  margin-bottom: -1px
+}
+
+#navigation li a {
+  text-align: center;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  border: 0.5px solid black;
+  color: black;
+}
+
+.active {
+  background-color: #1179DC;
+}
+
+
+li a.active {
+  color: white !important;
+}
+
+#HULogo{
+  float:right;
+  height: 130px;
+  margin-right: 10%
+}
+
+#homeImg {
+
+  height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+#footerTop {
+  text-align: center;
+}
+
+#leftForm {
+  text-align: left;
+  float: left;
+  width: 50%;
+}
+
+#rightForm {
+  float: right;
+  width: 50%;
+}
+
+#settings {
+  height: 400px;
+}
+
+#footer {
+  border-top: 2px solid black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#footerRight {
+  margin-right: 20px;
+  float: right
+}
+
+html {
+  font-family: arial;
+}

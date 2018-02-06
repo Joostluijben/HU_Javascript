@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebLeertaak</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="#">Instellingen</a></li>
+        <li><a href="progress.html">Voortgang</a></li>
+      </ul>
+    </div>
+    <h1>Instellingen</h1>
+    <form id="settings">
+    <div id='leftForm'>
+      <p><label class="field" for="firstName">Voornaam:</label><input type="text"/></p>
+      <p><label class="field" for="sirName">Achternaam:</label><input type="text"/></p>
+      <p>Studentnr: <input type="text"/></p>
+      <p>Email: <input type="email"/></p>
+      <p>Geboortedatum: <input type="date"/></p>
+    </div>
+    <div id='rightForm'>
+      <p><label class="field" for="class">Klas:</label>
+      <select>
+        <option>V1A</option>
+        <option>V1B</option>
+        <option>V1C</option>
+        <option>V1D</option>
+        <option>V1E</option>
+      </select>
+      </p>
+      <p><label class="field" for="study">Gekozen studierichting:</p>
+      <input type="radio" name="study">SNE</input>
+      <input type="radio" name="study">BIM</input>
+      <input type="radio" name="study">SIE</input>
+      <input type="radio" name="study">TI</input>
+      <p><label class="field" for="firstYear">Propedeuse behaald:</label></p>
+      <input type="radio" name="firstYear">Ja</input>
+      <input type="radio" name="firstYear">Nee</input>
+    </div>
+    </form>
+    <footer id="footer"><i><p id="footerTop">Deze opdracht is gemaakt in het kader van het vak Analyse & User interfacing</p>
+      <p>Auteur: Joost Luijben <span id="footerRight">Datum: 5-2-2018</span></p>
+      </i>
+    </footer>
+  </body>
+</html>
