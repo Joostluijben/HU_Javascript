@@ -13,25 +13,70 @@
         <li><a class="active" href="#">Voortgang</a></li>
       </ul>
     </div>
+    <div id="leftProgress">
     <h1>Voortgang</h1>
-    <table>
+    <table id="progressTable">
+      <thead>
+        <tr>
       <th>Vakcode</th>
       <th>ECTS</th>
       <th>Datum behaald</th>
+    </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>TICT-V1PROG-15</td>
         <td>5</td>
-        <td>10-11-2016</td>
+        <td><input type="date" value="2016-11-10" class="date"></td>
       </tr>
       <tr>
         <td>TICT-V1CSN-15</td>
         <td>5</td>
-        <td>7-11-2016</td>
+        <td><input type="date" value="2016-11-07" class="date"></td>
       </tr>
+      <tr>
+        <td>TICT-V1ICOR-15</td>
+        <td>5</td>
+        <td><input type="date" value="2016-10-30" class="date"></td>
+      </tr>
+    </tbody>
     </table>
-    <footer id="footer"><i><p id="footerTop">Deze opdracht is gemaakt in het kader van het vak Analyse & User interfacing</p>
-      <p>Auteur: Joost Luijben <span id="footerRight">Datum: 5-2-2018</span></p>
-      </i>
-    </footer>
+  </div>
+    <div id="rightProgress">
+      <h3>Student:</h3>
+    <img src="graph.png" id="graphImg" alt="graph"/>
+    <button type="button" id="studyChartButton" onclick="calculation()"><b>Bereken studietempo</b></button>
+  </div>
+  <footer id="footer"><p id="footerTop"><i>Deze opdracht is gemaakt in het kader van het vak Analyse & User interfacing</i></p>
+    <p><i>Auteur: Joost Luijben <span id="footerRight">Datum: 5-2-2018</span></i></p>
+  </footer>
+  <script>
+  function calculation() {
+     var dateArray = document.getElementsByClassName("date");
+     var dates = [];
+     console.log(dates);
+     for (var i = 0; i < dateArray.length; i++) {
+       dates.push(Date.parse(dateArray[i].value));
+     }
+     var startDay = Date.parse("9/4/2016");
+     var endDay = Math.max(...dates);
+     var difference = new Date(endDay - startDay);
+     var months = difference.getMonth();
+
+     var table = document.getElementById("progressTable");
+     var sum = 0;
+     for (var i = 1; i < table.rows.length; i++) {
+      sum += parseInt(table.rows[i].cells.item(1).innerHTML);
+     }
+
+     var monthEC = sum / months;
+
+     var restEC = 60 - sum;
+     var monthNeed = restEC / monthEC;
+
+     alert("Je hebt tot nu toe: " + sum + " ECTS behaald.\nJe huidge studietempo is: " + monthEC + " ECTS / mnd.\n"+
+     "Op basis van dit studietempo heb je " + monthEC + " maand nodig voor je P.");
+   }
+  </script>
   </body>
 </html>

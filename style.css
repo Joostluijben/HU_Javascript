@@ -66,19 +66,77 @@ li a.active {
   height: 400px;
 }
 
-#footer {
-  border-top: 2px solid black;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
+#settings input {
+  margin-left: 50%;
+  display: inline;
+  border: 1px solid black;
+  padding: 5px;
 }
 
+#settings label {
+  display: inline;
+  float: left;
+  margin-right: 50%;
+}
+
+#footer {
+  margin-top: 1%;
+  border-top: 2px solid black;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  right: 0;
+  bottom: 0;
+}
 #footerRight {
   margin-right: 20px;
   float: right
 }
 
+#leftProgress {
+  float: left;
+}
+
+#rightProgress {
+  float: right;
+  width: 50%;
+  text-align: center;
+  margin-top: 2%
+}
+
+#rightProgress h3 {
+  font-weight: normal
+}
+
+#progressTable {
+  background-color: #D0E75A;
+  border: solid 2px black;
+  border-collapse: collapse;
+  float: left;
+}
+
+#progressTable th, tr, td {
+    border: solid 1px black;
+}
+
+#graphImg {
+  display: block;
+  margin: auto
+}
+
+#studyChartButton {
+  border: none;
+  box-shadow: 10px 5px 10px grey;
+  margin-top: 10%;
+  padding: 4%;
+  width: 80%;
+  font-size: 20px;
+}
+
 html {
   font-family: arial;
+  margin: 0;
+  padding: 0;
+  height: 100%
 }

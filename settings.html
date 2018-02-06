@@ -16,15 +16,15 @@
     <h1>Instellingen</h1>
     <form id="settings">
     <div id='leftForm'>
-      <p><label class="field" for="firstName">Voornaam:</label><input type="text"/></p>
-      <p><label class="field" for="sirName">Achternaam:</label><input type="text"/></p>
-      <p>Studentnr: <input type="text"/></p>
-      <p>Email: <input type="email"/></p>
-      <p>Geboortedatum: <input type="date"/></p>
+      <p><label class="field" for="firstName">Voornaam:</label><input type="text" id="firstName"/></p>
+      <p><label class="field" for="sirName">Achternaam:</label><input type="text" id="sirName"/></p>
+      <p><label class="field" for="studentNumber">Studentnr:</label><input type="text" id="studentNumber"/></p>
+      <p><label class="field" for="email">Email:</label><input type="email" id="email"/></p>
+      <p><label class="field" for="birthday">Geboortedatum:</label><input type="date" id="birthday"/></p>
     </div>
     <div id='rightForm'>
       <p><label class="field" for="class">Klas:</label>
-      <select>
+      <select id="class">
         <option>V1A</option>
         <option>V1B</option>
         <option>V1C</option>
@@ -32,19 +32,18 @@
         <option>V1E</option>
       </select>
       </p>
-      <p><label class="field" for="study">Gekozen studierichting:</p>
-      <input type="radio" name="study">SNE</input>
-      <input type="radio" name="study">BIM</input>
-      <input type="radio" name="study">SIE</input>
-      <input type="radio" name="study">TI</input>
-      <p><label class="field" for="firstYear">Propedeuse behaald:</label></p>
-      <input type="radio" name="firstYear">Ja</input>
-      <input type="radio" name="firstYear">Nee</input>
+      <p>Gekozen studierichting:</p>
+      <input class="radio" type="radio" name="study" id="SNE">SNE<label for="SNE"></label>
+      <input class="radio" type="radio" name="study" id="BIM">BIM<label for="BIM"></label>
+      <input class="radio" type="radio" name="study" id="SIE">SIE<label for="SIE"></label>
+      <input class="radio" type="radio" name="study" id="TI">TI<label for="TI"></label>
+      <p>Propedeuse behaald:</p>
+      <input class="radio" type="radio" name="firstYear" id="firstYearYes">Ja<label for="firstYearYes"></label>
+      <input class="radio" type="radio" name="firstYear" id="firstYearNo">Nee<label for="firstYearNo"></label>
     </div>
     </form>
-    <footer id="footer"><i><p id="footerTop">Deze opdracht is gemaakt in het kader van het vak Analyse & User interfacing</p>
-      <p>Auteur: Joost Luijben <span id="footerRight">Datum: 5-2-2018</span></p>
-      </i>
+    <footer id="footer"><p id="footerTop"><i>Deze opdracht is gemaakt in het kader van het vak Analyse & User interfacing</i></p>
+      <p><i>Auteur: Joost Luijben <span id="footerRight">Datum: 5-2-2018</span></i></p>
     </footer>
   </body>
 </html>
