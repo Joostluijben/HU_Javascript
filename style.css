@@ -13,7 +13,9 @@
 #navigation li {
   float: left;
   margin-left: -1px;
-  margin-bottom: -1px
+  margin-bottom: -1px;
+  background-color: white;
+  margin-top: 3%
 }
 
 #navigation li a {
@@ -134,9 +136,37 @@ li a.active {
   font-size: 20px;
 }
 
+#content {
+  margin-left: 2%
+}
+
+#menuBar {
+  background-color: yellow;
+  border: 1px solid black
+}
+#user {
+  float: right;
+  margin-top: -7%;
+  margin-right: 2%
+}
+
+#user p {
+  float: left;
+  margin: center;
+  color: grey;
+}
+
+#user img {
+  height: 60px;
+}
+
 html {
   font-family: arial;
   margin: 0;
   padding: 0;
   height: 100%
+}
+
+body {
+  margin:0
 }
