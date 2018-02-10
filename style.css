@@ -64,6 +64,24 @@ li a.active {
   width: 50%;
 }
 
+#rightForm  img{
+  display: inline;
+  margin-left: 50%;
+  border: 1px solid black;
+}
+
+#rightForm button {
+  display: inline;
+  margin-left: 50%;
+  border-radius: 25px;
+  border-color: black;
+  margin-top: 1%;
+  color: white;
+  background-color: blue;
+  padding: 1%;
+  width: 15%
+}
+
 #settings {
   height: 400px;
 }
@@ -73,6 +91,25 @@ li a.active {
   display: inline;
   border: 1px solid black;
   padding: 5px;
+}
+
+#inputMale {
+  margin-right: 0%;
+  position: relative;
+  display: inline;
+}
+
+#inputFemale {
+  margin-right: 30px;
+  display: inline;
+}
+
+#inputOther {
+  display: inline;
+}
+
+#user img {
+  height: 60px;
 }
 
 #settings label {
@@ -98,28 +135,34 @@ li a.active {
 
 #leftProgress {
   float: left;
+  width: 49%;
 }
 
 #rightProgress {
   float: right;
-  width: 50%;
+  width: 49%;
   text-align: center;
-  margin-top: 2%
+  margin-top: 2%;
 }
 
 #rightProgress h3 {
   font-weight: normal
 }
 
+#map {
+  width: 70%;
+}
+
 #progressTable {
   background-color: #D0E75A;
   border: solid 2px black;
   border-collapse: collapse;
-  float: left;
+  width: 100%;
 }
 
 #progressTable th, tr, td {
     border: solid 1px black;
+    text-align: center;
 }
 
 #graphImg {
@@ -128,12 +171,14 @@ li a.active {
 }
 
 #studyChartButton {
+  position: relative;
   border: none;
   box-shadow: 10px 5px 10px grey;
-  margin-top: 10%;
+  margin-top: 3%;
   padding: 4%;
-  width: 80%;
+  width: 50%;
   font-size: 20px;
+  margin-left: 0;
 }
 
 #content {
@@ -156,9 +201,6 @@ li a.active {
   color: grey;
 }
 
-#user img {
-  height: 60px;
-}
 
 html {
   font-family: arial;
