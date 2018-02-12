@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>WebLeertaak</title>
+      <!--Call external stylesheet and javascript file-->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="progress.js"></script>
   </head>
   <body>
+  <!--Navigation in list-->
   <div id="menuBar">
     <div id="navigation">
       <ul>
@@ -14,14 +17,16 @@
         <li><a class="active" href="#">Voortgang</a></li>
       </ul>
     </div>
+    <!--user bar with image and name-->
     <div id="user">
-      <img src="user.png" alt="user">
+      <img src="images/user.png" alt="user">
       <p> Joost</p>
     </div>
   </div>
     <div id="content">
     <div id="leftProgress">
     <h1>Voortgang</h1>
+    <!--create the table-->
     <table id="progressTable">
       <thead>
         <tr>
@@ -48,49 +53,25 @@
       </tr>
     </tbody>
     </table>
+    <!--javascript button see progress.js-->
     <button type="button" id="studyChartButton" onclick="calculation()"><b>Bereken studietempo</b></button>
 
   </div>
 
 </div>
+  <!--right side of the progress page with mag and graph-->
     <div id="rightProgress">
       <h3>Student:</h3>
       <iframe id="map"
         frameborder="0"
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDrxviFvdgZCmh2z2nIDYAigW-ODuZd2xU&q=Aalberselanen+1,Woerden">
       </iframe>
-    <img src="graph.png" id="graphImg" alt="graph"/>
+    <img src="images/graph.png" id="graphImg" alt="graph"/>
     </div>
-  <footer id="footer"><p id="footerTop"><i>Deze opdracht is gemaakt in het kader van het vak Analyse & User interfacing</i></p>
+    <!--create the footer-->
+  <footer id="footer"><p id="footerTop"><i>Deze opdracht is gemaakt in het kader van het vak Analyse &#38; User interfacing</i></p>
     <p><i>Auteur: Joost Luijben <span id="footerRight">Datum: 5-2-2018</span></i></p>
   </footer>
-  <script>
-  function calculation() {
-     var dateArray = document.getElementsByClassName("date");
-     var dates = [];
-     console.log(dates);
-     for (var i = 0; i < dateArray.length; i++) {
-       dates.push(Date.parse(dateArray[i].value));
-     }
-     var startDay = Date.parse("9/4/2016");
-     var endDay = Math.max(...dates);
-     var difference = new Date(endDay - startDay);
-     var months = difference.getMonth();
 
-     var table = document.getElementById("progressTable");
-     var sum = 0;
-     for (var i = 1; i < table.rows.length; i++) {
-      sum += parseInt(table.rows[i].cells.item(1).innerHTML);
-     }
-
-     var monthEC = sum / months;
-
-     var restEC = 60 - sum;
-     var monthNeed = restEC / monthEC;
-
-     alert("Je hebt tot nu toe: " + sum + " ECTS behaald.\nJe huidge studietempo is: " + monthEC + " ECTS / mnd.\n"+
-     "Op basis van dit studietempo heb je " + monthEC + " maand nodig voor je P.");
-   }
-  </script>
   </body>
 </html>
